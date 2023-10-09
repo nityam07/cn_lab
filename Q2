@@ -1,0 +1,16 @@
+public static void main(String[] args) {
+		String filePath="C:\\Users\\E 555\\Desktop\\2141019432\\ByteStream\\Q2.txt";
+		long startTime= System.currentTimeMillis();
+		try (InputStream inputStream = new BufferedInputStream(new FileInputStream(filePath))){
+			int bytesRead;
+			byte[] buffer= new byte[1024];
+			while ((bytesRead=inputStream.read(buffer))!= -1) {
+				
+			}
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		long endTime=System.currentTimeMillis();
+		long duration= endTime- startTime;
+		System.out.println("Time Taken with Buffering: "+duration+" milliseconds");
+	}
